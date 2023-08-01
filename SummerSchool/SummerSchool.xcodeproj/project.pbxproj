@@ -74,6 +74,7 @@
 		8215A2262A78EBD000480798 /* SummerSchool */ = {
 			isa = PBXGroup;
 			children = (
+				82F668802A7987FB00B596C7 /* Extensions */,
 				8215A23B2A78ECF700480798 /* MainModule */,
 				8215A2272A78EBD000480798 /* AppDelegate.swift */,
 				8215A2292A78EBD000480798 /* SceneDelegate.swift */,
@@ -124,7 +125,6 @@
 		82F668732A794DE600B596C7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				82F668802A7987FB00B596C7 /* Extensions */,
 				82F668792A79524800B596C7 /* ButtomCell */,
 				82F668782A79523900B596C7 /* CommonCell */,
 			);

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MainViewProtocol: class {
-    func addSkill()
+    func addSkill(skill: String)
 }
 
 

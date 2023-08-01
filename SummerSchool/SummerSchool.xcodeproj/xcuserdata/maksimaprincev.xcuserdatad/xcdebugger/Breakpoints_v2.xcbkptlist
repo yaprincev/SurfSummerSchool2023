@@ -14,8 +14,8 @@
             filePath = "SummerSchool/MainModule/View/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "configureTopView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,10 +30,42 @@
             filePath = "SummerSchool/MainModule/View/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "changeButton(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "685B1E2E-D335-464B-A37B-544CE94A572B - a847b9673fcece0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SummerSchool.MainViewController.changeButton(Any) -&gt; ()"
+                  moduleName = "SummerSchool"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimaprincev/Documents/SurfSummerSchool2023/SurfSummerSchool2023/SummerSchool/SummerSchool/MainModule/View/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "685B1E2E-D335-464B-A37B-544CE94A572B - a847b9673fcebc9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SummerSchool.MainViewController.changeButton(Any) -&gt; ()"
+                  moduleName = "SummerSchool"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimaprincev/Documents/SurfSummerSchool2023/SurfSummerSchool2023/SummerSchool/SummerSchool/MainModule/View/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "62">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,10 +78,57 @@
             filePath = "SummerSchool/MainModule/View/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "setPerson(person:skills:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "134B4DE1-27F4-4702-8141-F18D8662373E - 905fa3c24a24749d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SummerSchool.MainViewController.setPerson(person: SummerSchool.Person, skills: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "SummerSchool"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimaprincev/Documents/SurfSummerSchool2023/SurfSummerSchool2023/SummerSchool/SummerSchool/MainModule/View/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "468">
+               </Location>
+               <Location
+                  uuid = "134B4DE1-27F4-4702-8141-F18D8662373E - 905fa3c24a247438"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SummerSchool.MainViewController.setPerson(person: SummerSchool.Person, skills: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "SummerSchool"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimaprincev/Documents/SurfSummerSchool2023/SurfSummerSchool2023/SummerSchool/SummerSchool/MainModule/View/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "468">
+               </Location>
+               <Location
+                  uuid = "134B4DE1-27F4-4702-8141-F18D8662373E - 905fa3c24a247476"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SummerSchool.MainViewController.setPerson(person: SummerSchool.Person, skills: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "SummerSchool"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksimaprincev/Documents/SurfSummerSchool2023/SurfSummerSchool2023/SummerSchool/SummerSchool/MainModule/View/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "468">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,8 +141,8 @@
             filePath = "SummerSchool/MainModule/View/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "MainViewController"
             landmarkType = "21">
          </BreakpointContent>
@@ -78,10 +157,26 @@
             filePath = "SummerSchool/MainModule/View/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "MainViewController"
             landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC43C5C1-C297-4524-8772-17AFCDDA9918"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SummerSchool/MainModule/View/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "configureCollection(with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

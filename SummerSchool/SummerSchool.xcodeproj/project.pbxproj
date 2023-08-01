@@ -22,6 +22,7 @@
 		82F6687D2A79573F00B596C7 /* CommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F6687C2A79573F00B596C7 /* CommonCell.swift */; };
 		82F6687E2A795E0000B596C7 /* ButtonCell.swift in Resources */ = {isa = PBXBuildFile; fileRef = 82F6687A2A79526B00B596C7 /* ButtonCell.swift */; };
 		82F6687F2A795E0400B596C7 /* CommonCell.swift in Resources */ = {isa = PBXBuildFile; fileRef = 82F6687C2A79573F00B596C7 /* CommonCell.swift */; };
+		82F668822A79880C00B596C7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F668812A79880C00B596C7 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		82F668762A79503D00B596C7 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		82F6687A2A79526B00B596C7 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		82F6687C2A79573F00B596C7 /* CommonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCell.swift; sourceTree = "<group>"; };
+		82F668812A79880C00B596C7 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		82F668732A794DE600B596C7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				82F668802A7987FB00B596C7 /* Extensions */,
 				82F668792A79524800B596C7 /* ButtomCell */,
 				82F668782A79523900B596C7 /* CommonCell */,
 			);
@@ -144,6 +147,14 @@
 				82F668762A79503D00B596C7 /* ButtonCell.xib */,
 			);
 			path = ButtomCell;
+			sourceTree = "<group>";
+		};
+		82F668802A7987FB00B596C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				82F668812A79880C00B596C7 /* StringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +237,7 @@
 				8215A2282A78EBD000480798 /* AppDelegate.swift in Sources */,
 				8215A22A2A78EBD000480798 /* SceneDelegate.swift in Sources */,
 				82F6687D2A79573F00B596C7 /* CommonCell.swift in Sources */,
+				82F668822A79880C00B596C7 /* StringExtension.swift in Sources */,
 				8215A23D2A78ED0C00480798 /* MainPresenter.swift in Sources */,
 				8215A2492A78F70900480798 /* ModuleBuilder.swift in Sources */,
 				82F6687B2A79526B00B596C7 /* ButtonCell.swift in Sources */,

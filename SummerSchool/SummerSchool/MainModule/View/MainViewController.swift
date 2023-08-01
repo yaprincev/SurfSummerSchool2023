@@ -12,6 +12,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     var presenter: MainViewPresenterProtocol!
     var person: Person!
     var skills: [String]!
+    var editMode: Bool = false
     //let scrollView = UIScrollView()
 
     private enum Constants {
@@ -37,15 +38,24 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         configureTopView()
         configureBottomView()
-        collectionView.register(UINib(nibName: "CommonCell", bundle: .main), forCellWithReuseIdentifier: "CommonCell")
-        collectionView.dataSource = self
-        collectionView.contentInset = .init(top: 10, left: 16, bottom: 10, right: 16)
-        collectionView.delegate = self
+        configureCollection(with: editMode)
        // configureScrollView()
     }
+    
     @IBAction func changeButton(_ sender: Any) {
-        
-        
+        if editMode == false {
+            editMode = true
+            skills.append("+")
+            configureCollection(with: editMode)
+            collectionView.reloadData()
+            pencilButton.setImage(UIImage(named: "Circle with tick"), for: .normal)
+        } else {
+            editMode = false
+            skills.removeLast()
+            configureCollection(with: editMode)
+            collectionView.reloadData()
+            pencilButton.setImage(UIImage(named: "Pencil"), for: .normal)
+        }
     }
 }
 
@@ -61,6 +71,17 @@ extension MainViewController: MainViewProtocol {
 }
 
 private extension MainViewController {
+    
+    func configureCollection(with editMode: Bool) {
+        if editMode == false {
+            collectionView.register(UINib(nibName: "CommonCell", bundle: .main), forCellWithReuseIdentifier: "CommonCell")
+        } else {
+            collectionView.register(UINib(nibName: "ButtonCell", bundle: .main), forCellWithReuseIdentifier: "ButtonCell")
+        }
+        collectionView.dataSource = self
+        collectionView.contentInset = .init(top: 10, left: 16, bottom: 10, right: 16)
+        collectionView.delegate = self
+    }
 //    func configureScrollView() {
 //        scrollView.translatesAutoresizingMaskIntoConstraints = false
 //        scrollView.showsVerticalScrollIndicator = true
@@ -130,12 +151,16 @@ private extension MainViewController {
 }
 
 
+
+
+
+
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CommonCell.self)", for: indexPath)
                 if let cell = cell as? CommonCell {
                     
-                    let skill = presenter.skills[indexPath.row]
+                    let skill = self.skills[indexPath.row]
                     cell.configure(with: skill)
                     
 
@@ -168,10 +193,4 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
 
 }
 
-extension String {
-    func sizeCounter(with font: UIFont) -> CGSize {
-        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font]
-        let size = (self as NSString).size(withAttributes: attributes)
-        return size
-    }
-}
+

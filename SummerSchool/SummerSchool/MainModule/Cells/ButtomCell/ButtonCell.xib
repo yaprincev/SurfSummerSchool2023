@@ -10,20 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ButtonCell" id="PBr-x3-hAZ" customClass="ButtonCell" customModule="SummerSchool" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="346" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="159" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QLQ-MT-f1l">
-                <rect key="frame" x="0.0" y="0.0" width="346" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="159" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3n3-wB-kmG">
-                        <rect key="frame" x="24" y="12" width="288" height="20"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gq-ZO-zdi">
-                        <rect key="frame" x="322" y="15" width="14" height="14"/>
+                        <rect key="frame" x="135" y="15" width="14" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="XXm-Gv-IrW"/>
                             <constraint firstAttribute="width" constant="14" id="jtG-jb-NRc"/>
@@ -34,23 +28,31 @@
                             <action selector="tickButton:" destination="PBr-x3-hAZ" eventType="touchUpInside" id="1C4-QL-JR5"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZJ-th-8AX">
+                        <rect key="frame" x="24" y="12" width="101" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="5Gq-ZO-zdi" firstAttribute="centerY" secondItem="QLQ-MT-f1l" secondAttribute="centerY" id="5r0-1K-4Or"/>
-                    <constraint firstAttribute="trailing" secondItem="3n3-wB-kmG" secondAttribute="trailing" constant="34" id="7x3-CF-dvu"/>
-                    <constraint firstAttribute="bottom" secondItem="3n3-wB-kmG" secondAttribute="bottom" constant="12" id="MdC-ew-0En"/>
-                    <constraint firstItem="3n3-wB-kmG" firstAttribute="leading" secondItem="QLQ-MT-f1l" secondAttribute="leading" constant="24" id="P1Z-kn-3Pz"/>
-                    <constraint firstItem="5Gq-ZO-zdi" firstAttribute="leading" secondItem="3n3-wB-kmG" secondAttribute="trailing" constant="10" id="w5A-O6-uRI"/>
-                    <constraint firstItem="3n3-wB-kmG" firstAttribute="top" secondItem="QLQ-MT-f1l" secondAttribute="top" constant="12" id="x2G-y8-7bJ"/>
+                    <constraint firstItem="LZJ-th-8AX" firstAttribute="top" secondItem="QLQ-MT-f1l" secondAttribute="top" constant="12" id="Ncb-tL-dYO"/>
+                    <constraint firstItem="LZJ-th-8AX" firstAttribute="leading" secondItem="QLQ-MT-f1l" secondAttribute="leading" constant="24" id="QE6-V8-i7g"/>
+                    <constraint firstItem="LZJ-th-8AX" firstAttribute="centerY" secondItem="QLQ-MT-f1l" secondAttribute="centerY" id="ZiG-3S-9Kv"/>
+                    <constraint firstAttribute="trailing" secondItem="5Gq-ZO-zdi" secondAttribute="trailing" constant="10" id="awZ-TO-ejn"/>
+                    <constraint firstAttribute="bottom" secondItem="LZJ-th-8AX" secondAttribute="bottom" constant="12" id="rZH-Ti-dnJ"/>
+                    <constraint firstItem="5Gq-ZO-zdi" firstAttribute="leading" secondItem="LZJ-th-8AX" secondAttribute="trailing" constant="10" id="yMN-05-MO0"/>
                 </constraints>
             </collectionViewCellContentView>
             <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
-            <size key="customSize" width="346" height="44"/>
+            <size key="customSize" width="159" height="44"/>
             <connections>
                 <outlet property="buttonOutlet" destination="5Gq-ZO-zdi" id="2kX-HP-MSw"/>
-                <outlet property="textLabel" destination="3n3-wB-kmG" id="oXv-Sj-5OT"/>
+                <outlet property="textLabel" destination="LZJ-th-8AX" id="PfG-Jt-Sqr"/>
             </connections>
-            <point key="canvasLocation" x="-366.41221374045801" y="-155.63380281690141"/>
+            <point key="canvasLocation" x="-509.16030534351142" y="-155.63380281690141"/>
         </collectionViewCell>
     </objects>
     <resources>

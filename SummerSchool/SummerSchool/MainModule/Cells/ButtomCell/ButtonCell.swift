@@ -16,13 +16,20 @@ class ButtonCell: UICollectionViewCell {
     
     
     func configure(skill: String) {
-        textLabel.text = skill
+        if skill != "+" {
+            buttonOutlet.isHidden = false
+            textLabel.text = skill
+        } else {
+            textLabel.text = skill
+            buttonOutlet.isHidden = true
+            textLabel.textAlignment = .center
+        }
     }
     
     
     
-    @IBAction func tickButton(_ sender: Any) {
-    }
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         contentView.layer.cornerRadius = 10

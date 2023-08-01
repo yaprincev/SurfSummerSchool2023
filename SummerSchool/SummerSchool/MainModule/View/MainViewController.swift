@@ -147,6 +147,33 @@ private extension MainViewController {
         aboutYourselfLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         aboutYourselfLabel.textColor = UIColor(red: 0x31/255.0, green: 0x31/255.0, blue: 0x31/255.0, alpha: 1.0)
     }
+    func configureAlertController() {
+        let alert = UIAlertController(title: "Добавление навыка", message: "Введите название навыка", preferredStyle: .alert)
+        
+        alert.addTextField { (text) in
+            text.placeholder = "Введите название"
+        }
+        
+        let actionNo = UIAlertAction(title: "Отмена", style: .default)
+        
+        let actionYes = UIAlertAction(title: "Добавить", style: .cancel) { (_) in
+            if let text = alert.textFields?.first {
+                if text.text != "" {
+                    self.skills.removeLast()
+                    self.skills.append(text.text!)
+                    self.skills.append("+")
+                    self.collectionView.reloadData()
+                }
+            }
+        }
+        
+        alert.addAction(actionYes)
+        alert.addAction(actionNo)
+        
+
+        
+        self.present(alert, animated: true)
+    }
     
 }
 
@@ -199,6 +226,8 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         if editMode && indexPath.row != skills.count - 1 {
             skills.remove(at: indexPath.row)
             collectionView.reloadData()
+        } else if editMode && indexPath.row == skills.count - 1 {
+            configureAlertController()
         }
     }
     

@@ -8,13 +8,14 @@
 import Foundation
 
 protocol MainViewProtocol: class {
-    func addSkill(skill: String)
+    func setPerson(person: Person)
 }
 
 
 protocol MainViewPresenterProtocol: class {
     init(view: MainViewProtocol, person: Person)
     var skills: [String]? { get set }
+    func showPersonInfo()
 }
 
 class MainPresenter: MainViewPresenterProtocol {
@@ -26,6 +27,10 @@ class MainPresenter: MainViewPresenterProtocol {
     required init(view: MainViewProtocol, person: Person) {
         self.view = view
         self.person = person
+    }
+    
+    func showPersonInfo() {
+        self.view?.setPerson(person: person)
     }
     
 }

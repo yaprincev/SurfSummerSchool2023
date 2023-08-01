@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Person {
     let lastName: String
@@ -13,4 +14,5 @@ struct Person {
     let patronymic: String
     let mainInfo: String
     let city: String
+    let image: UIImage
 }

@@ -15,9 +15,10 @@ protocol Builder {
 class ModelBuilder: Builder {
     static func createMainModule() -> UIViewController {
         let view = MainViewController()
-        let person = Person(lastName: "Япринцев", firstName: "Максим", patronymic: "Александрович", mainInfo: "Junior iOS-разработчик, опыт более 1-го года", city: "Воронеж")
+        let person = Person(lastName: "Япринцев", firstName: "Максим", patronymic: "Александрович", mainInfo: "Junior iOS-разработчик, опыт более 1-го года", city: "Воронеж", image: UIImage(named: "Person Photo")!)
         let presenter = MainPresenter(view: view, person: person)
         view.presenter = presenter
+        view.navigationItem.title = "Профиль"
         return view
     }
 }

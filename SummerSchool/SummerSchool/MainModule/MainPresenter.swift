@@ -1,0 +1,28 @@
+//
+//  MainPresenter.swift
+//  SummerSchool
+//
+//  Created by Максим Япринцев on 01.08.2023.
+//
+
+import Foundation
+
+protocol MainViewProtocol: class {
+    func addSkill()
+}
+
+
+protocol MainViewPresenterProtocol: class {
+    init(view: MainViewProtocol, person: Person)
+    var skills: [String] { get set }
+}
+
+class MainPresenter: MainViewPresenterProtocol {
+    weak var view: MainViewProtocol?
+    let person: Person
+    required init(view: MainViewProtocol, person: <<error type>>) {
+        self.view = view
+        self.person = person
+    }
+    
+}

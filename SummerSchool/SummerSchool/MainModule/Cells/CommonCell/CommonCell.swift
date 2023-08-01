@@ -13,13 +13,18 @@ import UIKit
 class CommonCell: UICollectionViewCell {
     
     @IBOutlet weak var textLabel: UILabel!
-    
-    func configure(skill: String) {
-        textLabel.text = skill
+    func configure(with text: String) {
+        textLabel.text = text
+
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        contentView.layer.cornerRadius = 10
+        contentView.layer.masksToBounds = true
+        
+
     }
+
 }
 

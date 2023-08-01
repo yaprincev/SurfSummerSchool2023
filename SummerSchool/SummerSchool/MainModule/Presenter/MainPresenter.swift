@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MainViewProtocol: class {
-    func setPerson(person: Person)
+    func setPerson(person: Person, skills: [String])
 }
 
 
@@ -19,7 +19,7 @@ protocol MainViewPresenterProtocol: class {
 }
 
 class MainPresenter: MainViewPresenterProtocol {
-    var skills: [String] = ["cxc", "dsdsds", "sasa"]
+    var skills: [String] = ["cxc", "dsdsds", "sasZDSSDSDSa", "1", "21"]
     weak var view: MainViewProtocol?
     let person: Person
     
@@ -30,7 +30,7 @@ class MainPresenter: MainViewPresenterProtocol {
     }
     
     func showPersonInfo() {
-        self.view?.setPerson(person: person)
+        self.view?.setPerson(person: person, skills: self.skills)
     }
     
 }

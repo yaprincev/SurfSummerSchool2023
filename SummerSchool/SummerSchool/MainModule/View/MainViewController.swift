@@ -11,8 +11,13 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     
     var presenter: MainViewPresenterProtocol!
     var person: Person!
+    var skills: [String]!
     //let scrollView = UIScrollView()
 
+    private enum Constants {
+        static let spaceBetweenElements: CGFloat = 12
+        static let spaceBetweenRows: CGFloat = 6
+    }
     
     @IBOutlet weak var personImage: UIImageView!
     @IBOutlet weak var fioLabel: UILabel!
@@ -32,11 +37,11 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         configureTopView()
         configureBottomView()
-        collectionView.register(UINib(nibName: "\(CommonCell.self)", bundle: .main), forCellWithReuseIdentifier: "\(CommonCell.self)")
+        collectionView.register(UINib(nibName: "CommonCell", bundle: .main), forCellWithReuseIdentifier: "CommonCell")
         collectionView.dataSource = self
-        //collectionView.delegate = self
+        collectionView.contentInset = .init(top: 10, left: 16, bottom: 10, right: 16)
+        collectionView.delegate = self
        // configureScrollView()
-        
     }
     @IBAction func changeButton(_ sender: Any) {
         
@@ -49,8 +54,9 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
 
 
 extension MainViewController: MainViewProtocol {
-    func setPerson(person: Person) {
+    func setPerson(person: Person, skills: [String]) {
         self.person = person
+        self.skills = skills
     }
 }
 
@@ -120,25 +126,52 @@ private extension MainViewController {
         aboutYourselfLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         aboutYourselfLabel.textColor = UIColor(red: 0x31/255.0, green: 0x31/255.0, blue: 0x31/255.0, alpha: 1.0)
     }
+    
 }
 
 
-extension MainViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        presenter.skills.count
-    }
-    
+extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CommonCell.self)", for: indexPath)
-        if let cell = cell as? CommonCell {
-            
-            let skill = presenter.skills[indexPath.row]
-            cell.configure(skill: skill)
-            
+                if let cell = cell as? CommonCell {
+                    
+                    let skill = presenter.skills[indexPath.row]
+                    cell.configure(with: skill)
+                    
 
-        }
-        return cell
+                }
+                return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        self.skills.count
+    }
+    
+
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return Constants.spaceBetweenRows
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return Constants.spaceBetweenElements
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommonCell", for: indexPath) as! CommonCell
+        let text = skills[indexPath.row]
+        let font = UIFont.systemFont(ofSize: 14)
+        let size = text.sizeCounter(with: font)
+        return CGSize(width: size.width + 80, height: 44)
     }
     
     
+
+}
+
+extension String {
+    func sizeCounter(with font: UIFont) -> CGSize {
+        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font]
+        let size = (self as NSString).size(withAttributes: attributes)
+        return size
+    }
 }

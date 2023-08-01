@@ -10,31 +10,34 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CommonCell" id="UIC-nT-U8P" customClass="CommonCell" customModule="SummerSchool" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="99" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="257" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rQk-la-Nga">
-                <rect key="frame" x="0.0" y="0.0" width="99" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="257" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WB-Lx-lFq">
-                        <rect key="frame" x="24" y="12" width="51" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh3-7W-Smx">
+                        <rect key="frame" x="24" y="12" width="209" height="76"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.19215686274509802" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="2WB-Lx-lFq" secondAttribute="bottom" constant="12" id="Boa-OM-4il"/>
-                    <constraint firstItem="2WB-Lx-lFq" firstAttribute="top" secondItem="rQk-la-Nga" secondAttribute="top" constant="12" id="CqS-DW-rlH"/>
-                    <constraint firstItem="2WB-Lx-lFq" firstAttribute="centerX" secondItem="rQk-la-Nga" secondAttribute="centerX" id="N7m-kv-Dzo"/>
-                    <constraint firstItem="2WB-Lx-lFq" firstAttribute="leading" secondItem="rQk-la-Nga" secondAttribute="leading" constant="24" id="Tpq-z1-vs3"/>
-                    <constraint firstItem="2WB-Lx-lFq" firstAttribute="centerY" secondItem="rQk-la-Nga" secondAttribute="centerY" id="fJi-Oo-Zgk"/>
-                    <constraint firstAttribute="trailing" secondItem="2WB-Lx-lFq" secondAttribute="trailing" constant="24" id="gQ1-Eg-gLq"/>
+                    <constraint firstItem="Lh3-7W-Smx" firstAttribute="centerY" secondItem="rQk-la-Nga" secondAttribute="centerY" id="0JH-lb-zig"/>
+                    <constraint firstAttribute="trailing" secondItem="Lh3-7W-Smx" secondAttribute="trailing" constant="24" id="CkO-zp-gkZ"/>
+                    <constraint firstItem="Lh3-7W-Smx" firstAttribute="leading" secondItem="rQk-la-Nga" secondAttribute="leading" constant="24" id="ENf-CC-qNo"/>
+                    <constraint firstAttribute="bottom" secondItem="Lh3-7W-Smx" secondAttribute="bottom" constant="12" id="WD6-0I-HZX"/>
+                    <constraint firstItem="Lh3-7W-Smx" firstAttribute="centerX" secondItem="rQk-la-Nga" secondAttribute="centerX" id="g8m-fC-fKw"/>
+                    <constraint firstItem="Lh3-7W-Smx" firstAttribute="top" secondItem="rQk-la-Nga" secondAttribute="top" constant="12" id="t4P-mh-PqY"/>
                 </constraints>
             </collectionViewCellContentView>
-            <size key="customSize" width="99" height="93"/>
-            <point key="canvasLocation" x="228.24427480916029" y="-128.87323943661971"/>
+            <size key="customSize" width="257" height="149"/>
+            <connections>
+                <outlet property="textLabel" destination="Lh3-7W-Smx" id="3hV-Gy-ufq"/>
+            </connections>
+            <point key="canvasLocation" x="307.63358778625951" y="-147.18309859154931"/>
         </collectionViewCell>
     </objects>
 </document>

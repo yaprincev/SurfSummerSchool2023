@@ -11,10 +11,22 @@ import UIKit
 
 class ButtonCell: UICollectionViewCell {
     
+    // MARK: - Views
+    
     @IBOutlet weak var buttonOutlet: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     
+    // MARK: - UICollectionViewCell
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        contentView.layer.cornerRadius = 10
+        contentView.layer.masksToBounds = true
+    }
+}
+
+
+extension ButtonCell {
     func configure(skill: String) {
         if skill != "+" {
             buttonOutlet.isHidden = false
@@ -24,17 +36,5 @@ class ButtonCell: UICollectionViewCell {
             buttonOutlet.isHidden = true
             textLabel.textAlignment = .center
         }
-    }
-    
-    
-    
-
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        contentView.layer.cornerRadius = 10
-        contentView.layer.masksToBounds = true
-        
-
     }
 }

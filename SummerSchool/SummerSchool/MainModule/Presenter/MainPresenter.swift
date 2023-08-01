@@ -7,10 +7,13 @@
 
 import Foundation
 
+// MARK: - View Protocol
+
 protocol MainViewProtocol: class {
     func setPerson(person: Person, skills: [String])
 }
 
+// MARK: - Presenter Protocol
 
 protocol MainViewPresenterProtocol: class {
     init(view: MainViewProtocol, person: Person)
@@ -18,8 +21,10 @@ protocol MainViewPresenterProtocol: class {
     func showPersonInfo()
 }
 
+// MARK: - Presenter
+
 class MainPresenter: MainViewPresenterProtocol {
-    var skills: [String] = ["cxc", "dsdsds", "sasZDSSDSDSa", "1", "21"]
+    var skills: [String] = []
     weak var view: MainViewProtocol?
     let person: Person
     

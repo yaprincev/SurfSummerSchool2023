@@ -9,30 +9,36 @@ import UIKit
 
 class MainViewController: UIViewController, UIScrollViewDelegate {
     
+    // MARK: - Properties
+    
     var presenter: MainViewPresenterProtocol!
     var person: Person!
     var skills: [String]!
     var editMode: Bool = false
     //let scrollView = UIScrollView()
 
+    // MARK: - Constants
+    
     private enum Constants {
         static let spaceBetweenElements: CGFloat = 12
         static let spaceBetweenRows: CGFloat = 6
     }
     
-    @IBOutlet weak var personImage: UIImageView!
-    @IBOutlet weak var fioLabel: UILabel!
-    @IBOutlet weak var infoLabel: UILabel!
-    @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var cityImage: UIImageView!
-    @IBOutlet weak var bottomView: UIView!
-    @IBOutlet weak var skillsLabel: UILabel!
-    @IBOutlet weak var pencilButton: UIButton!
-    @IBOutlet weak var personInfoLabel: UILabel!
-    @IBOutlet weak var aboutYourselfLabel: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
+    // MARK: - Views
     
+    @IBOutlet private weak var personImage: UIImageView!
+    @IBOutlet private weak var fioLabel: UILabel!
+    @IBOutlet private weak var infoLabel: UILabel!
+    @IBOutlet private weak var cityLabel: UILabel!
+    @IBOutlet private weak var cityImage: UIImageView!
+    @IBOutlet private weak var bottomView: UIView!
+    @IBOutlet private weak var skillsLabel: UILabel!
+    @IBOutlet private weak var pencilButton: UIButton!
+    @IBOutlet private weak var personInfoLabel: UILabel!
+    @IBOutlet private weak var aboutYourselfLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
+    // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,9 +65,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     }
 }
 
-
-
-
+// MARK: - Protocol Extension
 
 extension MainViewController: MainViewProtocol {
     func setPerson(person: Person, skills: [String]) {
@@ -69,6 +73,8 @@ extension MainViewController: MainViewProtocol {
         self.skills = skills
     }
 }
+
+// MARK: - Private Methods
 
 private extension MainViewController {
     
@@ -82,6 +88,7 @@ private extension MainViewController {
         collectionView.contentInset = .init(top: 10, left: 16, bottom: 10, right: 16)
         collectionView.delegate = self
     }
+    // TODO: - ScrollView
 //    func configureScrollView() {
 //        scrollView.translatesAutoresizingMaskIntoConstraints = false
 //        scrollView.showsVerticalScrollIndicator = true
@@ -147,6 +154,9 @@ private extension MainViewController {
         aboutYourselfLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         aboutYourselfLabel.textColor = UIColor(red: 0x31/255.0, green: 0x31/255.0, blue: 0x31/255.0, alpha: 1.0)
     }
+    
+    
+    
     func configureAlertController() {
         let alert = UIAlertController(title: "Добавление навыка", message: "Введите название навыка", preferredStyle: .alert)
         
@@ -166,20 +176,15 @@ private extension MainViewController {
                 }
             }
         }
-        
         alert.addAction(actionYes)
         alert.addAction(actionNo)
-        
-
-        
         self.present(alert, animated: true)
     }
-    
 }
 
 
 
-
+// MARK: - UICollection
 
 
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UICollectionViewDelegate {

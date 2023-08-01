@@ -12,10 +12,14 @@ import UIKit
 
 class CommonCell: UICollectionViewCell {
     
+    // MARK: - Views
+    
     @IBOutlet weak var textLabel: UILabel!
+    
+    // MARK: - UICollectionViewCell
+    
     func configure(with text: String) {
         textLabel.text = text
-
     }
     
     override func layoutSubviews() {

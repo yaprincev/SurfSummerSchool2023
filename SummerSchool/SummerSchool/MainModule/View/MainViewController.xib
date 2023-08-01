@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="SummerSchool" customModuleProvider="target">
             <connections>
+                <outlet property="fioLabel" destination="QeA-oT-eM2" id="m9P-RD-AdS"/>
+                <outlet property="infoLabel" destination="org-Jt-LRq" id="Fd2-v4-xFM"/>
                 <outlet property="personImage" destination="YuS-35-fSR" id="OMT-UR-o6H"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,14 +22,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YuS-35-fSR">
-                    <rect key="frame" x="136.66666666666666" y="139" width="119.99999999999997" height="120"/>
+                    <rect key="frame" x="136.66666666666666" y="83" width="119.99999999999997" height="120"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="6VA-1J-wUK"/>
                         <constraint firstAttribute="height" constant="120" id="Kcf-aa-V8G"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeA-oT-eM2">
-                    <rect key="frame" x="175.66666666666666" y="275" width="42" height="21"/>
+                    <rect key="frame" x="75" y="219" width="243" height="20.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="org-Jt-LRq">
+                    <rect key="frame" x="51" y="243.33333333333334" width="291" height="21.000000000000028"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -36,10 +44,14 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="YuS-35-fSR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="11w-F5-ncd"/>
+                <constraint firstItem="YuS-35-fSR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="11w-F5-ncd"/>
+                <constraint firstItem="QeA-oT-eM2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="75" id="EJl-N1-ocs"/>
                 <constraint firstItem="QeA-oT-eM2" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Eh7-Ac-Znn"/>
                 <constraint firstItem="YuS-35-fSR" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Ghn-f0-zYh"/>
+                <constraint firstItem="org-Jt-LRq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="51" id="LPI-ta-R7x"/>
                 <constraint firstItem="QeA-oT-eM2" firstAttribute="top" secondItem="YuS-35-fSR" secondAttribute="bottom" constant="16" id="Nbx-UQ-kqW"/>
+                <constraint firstItem="org-Jt-LRq" firstAttribute="top" secondItem="QeA-oT-eM2" secondAttribute="bottom" constant="4" id="TWv-YN-ly8"/>
+                <constraint firstItem="org-Jt-LRq" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="wt1-yv-CEB"/>
             </constraints>
             <point key="canvasLocation" x="35.877862595419849" y="19.718309859154932"/>
         </view>

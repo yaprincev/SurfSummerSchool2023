@@ -157,22 +157,29 @@ private extension MainViewController {
 
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CommonCell.self)", for: indexPath)
-                if let cell = cell as? CommonCell {
-                    
-                    let skill = self.skills[indexPath.row]
-                    cell.configure(with: skill)
-                    
-
-                }
-                return cell
+        if editMode {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(ButtonCell.self)", for: indexPath)
+            if let cell = cell as? ButtonCell {
+                
+                let skill = self.skills[indexPath.row]
+                cell.configure(skill: skill)
+            }
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CommonCell.self)", for: indexPath)
+            if let cell = cell as? CommonCell {
+                
+                let skill = self.skills[indexPath.row]
+                cell.configure(with: skill)
+            }
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         self.skills.count
     }
     
-
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return Constants.spaceBetweenRows
@@ -182,11 +189,17 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         return Constants.spaceBetweenElements
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CommonCell", for: indexPath) as! CommonCell
         let text = skills[indexPath.row]
         let font = UIFont.systemFont(ofSize: 14)
         let size = text.sizeCounter(with: font)
         return CGSize(width: size.width + 80, height: 44)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if editMode && indexPath.row != skills.count - 1 {
+            skills.remove(at: indexPath.row)
+            collectionView.reloadData()
+        }
     }
     
     

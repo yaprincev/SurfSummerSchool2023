@@ -30,6 +30,9 @@
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="Cross"/>
+                        <connections>
+                            <action selector="tickButton:" destination="PBr-x3-hAZ" eventType="touchUpInside" id="1C4-QL-JR5"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -41,8 +44,10 @@
                     <constraint firstItem="3n3-wB-kmG" firstAttribute="top" secondItem="QLQ-MT-f1l" secondAttribute="top" constant="12" id="x2G-y8-7bJ"/>
                 </constraints>
             </collectionViewCellContentView>
+            <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
             <size key="customSize" width="346" height="44"/>
             <connections>
+                <outlet property="buttonOutlet" destination="5Gq-ZO-zdi" id="2kX-HP-MSw"/>
                 <outlet property="textLabel" destination="3n3-wB-kmG" id="oXv-Sj-5OT"/>
             </connections>
             <point key="canvasLocation" x="-366.41221374045801" y="-155.63380281690141"/>

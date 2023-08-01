@@ -11,9 +11,23 @@ import UIKit
 
 class ButtonCell: UICollectionViewCell {
     
+    @IBOutlet weak var buttonOutlet: UIButton!
     @IBOutlet weak var textLabel: UILabel!
+    
     
     func configure(skill: String) {
         textLabel.text = skill
+    }
+    
+    
+    
+    @IBAction func tickButton(_ sender: Any) {
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        contentView.layer.cornerRadius = 10
+        contentView.layer.masksToBounds = true
+        
+
     }
 }

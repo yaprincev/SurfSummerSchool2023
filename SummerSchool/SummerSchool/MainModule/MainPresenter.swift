@@ -14,13 +14,16 @@ protocol MainViewProtocol: class {
 
 protocol MainViewPresenterProtocol: class {
     init(view: MainViewProtocol, person: Person)
-    var skills: [String] { get set }
+    var skills: [String]? { get set }
 }
 
 class MainPresenter: MainViewPresenterProtocol {
+    var skills: [String]?
     weak var view: MainViewProtocol?
     let person: Person
-    required init(view: MainViewProtocol, person: <<error type>>) {
+    
+    
+    required init(view: MainViewProtocol, person: Person) {
         self.view = view
         self.person = person
     }

@@ -16,6 +16,10 @@
 		8215A2452A78F6AD00480798 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8215A2432A78F6AD00480798 /* MainViewController.swift */; };
 		8215A2462A78F6AD00480798 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8215A2442A78F6AD00480798 /* MainViewController.xib */; };
 		8215A2492A78F70900480798 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8215A2482A78F70900480798 /* ModuleBuilder.swift */; };
+		82F668752A794E1D00B596C7 /* SkillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F668742A794E1D00B596C7 /* SkillCell.xib */; };
+		82F668772A79503D00B596C7 /* ButtonSkillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82F668762A79503D00B596C7 /* ButtonSkillCell.xib */; };
+		82F6687B2A79526B00B596C7 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F6687A2A79526B00B596C7 /* ButtonCell.swift */; };
+		82F6687D2A79573F00B596C7 /* CommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F6687C2A79573F00B596C7 /* CommonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		8215A2432A78F6AD00480798 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8215A2442A78F6AD00480798 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		8215A2482A78F70900480798 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		82F668742A794E1D00B596C7 /* SkillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillCell.xib; sourceTree = "<group>"; };
+		82F668762A79503D00B596C7 /* ButtonSkillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonSkillCell.xib; sourceTree = "<group>"; };
+		82F6687A2A79526B00B596C7 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		82F6687C2A79573F00B596C7 /* CommonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 		8215A23B2A78ECF700480798 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				82F668732A794DE600B596C7 /* Cells */,
 				8215A2412A78F68800480798 /* Model */,
 				8215A2422A78F69300480798 /* View */,
 				8215A2402A78F64000480798 /* Presenter */,
@@ -106,6 +115,33 @@
 				8215A2442A78F6AD00480798 /* MainViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		82F668732A794DE600B596C7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				82F668792A79524800B596C7 /* ButtomCell */,
+				82F668782A79523900B596C7 /* CommonCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		82F668782A79523900B596C7 /* CommonCell */ = {
+			isa = PBXGroup;
+			children = (
+				82F6687C2A79573F00B596C7 /* CommonCell.swift */,
+				82F668742A794E1D00B596C7 /* SkillCell.xib */,
+			);
+			path = CommonCell;
+			sourceTree = "<group>";
+		};
+		82F668792A79524800B596C7 /* ButtomCell */ = {
+			isa = PBXGroup;
+			children = (
+				82F6687A2A79526B00B596C7 /* ButtonCell.swift */,
+				82F668762A79503D00B596C7 /* ButtonSkillCell.xib */,
+			);
+			path = ButtomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +202,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82F668772A79503D00B596C7 /* ButtonSkillCell.xib in Resources */,
 				8215A2342A78EBD500480798 /* LaunchScreen.storyboard in Resources */,
+				82F668752A794E1D00B596C7 /* SkillCell.xib in Resources */,
 				8215A2312A78EBD500480798 /* Assets.xcassets in Resources */,
 				8215A2462A78F6AD00480798 /* MainViewController.xib in Resources */,
 			);
@@ -183,8 +221,10 @@
 				8215A23F2A78F29C00480798 /* Person.swift in Sources */,
 				8215A2282A78EBD000480798 /* AppDelegate.swift in Sources */,
 				8215A22A2A78EBD000480798 /* SceneDelegate.swift in Sources */,
+				82F6687D2A79573F00B596C7 /* CommonCell.swift in Sources */,
 				8215A23D2A78ED0C00480798 /* MainPresenter.swift in Sources */,
 				8215A2492A78F70900480798 /* ModuleBuilder.swift in Sources */,
+				82F6687B2A79526B00B596C7 /* ButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

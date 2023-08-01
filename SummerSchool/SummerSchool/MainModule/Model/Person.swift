@@ -15,4 +15,5 @@ struct Person {
     let mainInfo: String
     let city: String
     let image: UIImage
+    let detailInfo: String
 }

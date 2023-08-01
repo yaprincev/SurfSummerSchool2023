@@ -11,6 +11,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     
     var presenter: MainViewPresenterProtocol!
     var person: Person!
+    //let scrollView = UIScrollView()
 
     
     @IBOutlet weak var personImage: UIImageView!
@@ -18,16 +19,34 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var cityImage: UIImageView!
-  //  @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var skillsLabel: UILabel!
+    @IBOutlet weak var pencilButton: UIButton!
+    @IBOutlet weak var personInfoLabel: UILabel!
+    @IBOutlet weak var aboutYourselfLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTopView()
         configureBottomView()
-      //  configureScrollView()
+        collectionView.register(UINib(nibName: "\(CommonCell.self)", bundle: .main), forCellWithReuseIdentifier: "\(CommonCell.self)")
+        collectionView.dataSource = self
+        //collectionView.delegate = self
+       // configureScrollView()
+        
+    }
+    @IBAction func changeButton(_ sender: Any) {
+        
+        
     }
 }
+
+
+
+
 
 extension MainViewController: MainViewProtocol {
     func setPerson(person: Person) {
@@ -41,6 +60,10 @@ private extension MainViewController {
 //        scrollView.showsVerticalScrollIndicator = true
 //        scrollView.alwaysBounceVertical = true
 //
+//        for subview in view.subviews {
+//            scrollView.addSubview(subview)
+//        }
+        
 //        NSLayoutConstraint.activate([
 //            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
 //            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -84,5 +107,38 @@ private extension MainViewController {
         skillsLabel.text = "Мои навыки"
         skillsLabel.textColor = UIColor(red: 0x31/255.0, green: 0x31/255.0, blue: 0x31/255.0, alpha: 1.0)
         skillsLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        
+        pencilButton.setImage(UIImage(named: "Pencil"), for: .normal)
+        pencilButton.titleLabel?.text = ""
+        
+        personInfoLabel.text = person.detailInfo
+        personInfoLabel.font = UIFont.systemFont(ofSize: 14)
+        personInfoLabel.textColor = UIColor(red: 0x31/255.0, green: 0x31/255.0, blue: 0x31/255.0, alpha: 1.0)
+        personInfoLabel.numberOfLines = 0
+        
+        aboutYourselfLabel.text = "О себе"
+        aboutYourselfLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        aboutYourselfLabel.textColor = UIColor(red: 0x31/255.0, green: 0x31/255.0, blue: 0x31/255.0, alpha: 1.0)
     }
+}
+
+
+extension MainViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        presenter.skills.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CommonCell.self)", for: indexPath)
+        if let cell = cell as? CommonCell {
+            
+            let skill = presenter.skills[indexPath.row]
+            cell.configure(skill: skill)
+            
+
+        }
+        return cell
+    }
+    
+    
 }

@@ -14,12 +14,12 @@ protocol MainViewProtocol: class {
 
 protocol MainViewPresenterProtocol: class {
     init(view: MainViewProtocol, person: Person)
-    var skills: [String]? { get set }
+    var skills: [String] { get set }
     func showPersonInfo()
 }
 
 class MainPresenter: MainViewPresenterProtocol {
-    var skills: [String]?
+    var skills: [String] = ["cxc", "dsdsds", "sasa"]
     weak var view: MainViewProtocol?
     let person: Person
     

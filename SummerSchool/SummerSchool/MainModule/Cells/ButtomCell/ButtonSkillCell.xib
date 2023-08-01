@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ButtonCell" id="PBr-x3-hAZ" customClass="ButtonCell" customModule="SummerSchool" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QLQ-MT-f1l">
+                <rect key="frame" x="0.0" y="0.0" width="346" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3n3-wB-kmG">
+                        <rect key="frame" x="24" y="12" width="288" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gq-ZO-zdi">
+                        <rect key="frame" x="322" y="15" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="XXm-Gv-IrW"/>
+                            <constraint firstAttribute="width" constant="14" id="jtG-jb-NRc"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="Cross"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5Gq-ZO-zdi" firstAttribute="centerY" secondItem="QLQ-MT-f1l" secondAttribute="centerY" id="5r0-1K-4Or"/>
+                    <constraint firstAttribute="trailing" secondItem="3n3-wB-kmG" secondAttribute="trailing" constant="34" id="7x3-CF-dvu"/>
+                    <constraint firstAttribute="bottom" secondItem="3n3-wB-kmG" secondAttribute="bottom" constant="12" id="MdC-ew-0En"/>
+                    <constraint firstItem="3n3-wB-kmG" firstAttribute="leading" secondItem="QLQ-MT-f1l" secondAttribute="leading" constant="24" id="P1Z-kn-3Pz"/>
+                    <constraint firstItem="5Gq-ZO-zdi" firstAttribute="leading" secondItem="3n3-wB-kmG" secondAttribute="trailing" constant="10" id="w5A-O6-uRI"/>
+                    <constraint firstItem="3n3-wB-kmG" firstAttribute="top" secondItem="QLQ-MT-f1l" secondAttribute="top" constant="12" id="x2G-y8-7bJ"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="346" height="44"/>
+            <connections>
+                <outlet property="textLabel" destination="3n3-wB-kmG" id="oXv-Sj-5OT"/>
+            </connections>
+            <point key="canvasLocation" x="-366.41221374045801" y="-155.63380281690141"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Cross" width="14" height="14"/>
+    </resources>
+</document>

@@ -7,3 +7,10 @@
 
 import Foundation
 
+struct Person {
+    let firstName: String
+    let lastName: String
+    let patronymic: String
+    let mainInfo: String
+    let city: String
+}
